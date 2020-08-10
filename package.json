@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "12.16.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node server.js --ignore client",
+    "dev": "nodemon --exec babel-node server.js --ignore client",
     "build": "babel server.js --out-file server.compiled.js",
-    "scripts": "node server.compiled.js"
+    "start": "node server.compiled.js"
   },
   "author": "Allen Ma",
   "license": "ISC",

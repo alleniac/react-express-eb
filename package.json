@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node server.js --ignore client",
-    "build": "babel server.js --out-file server.compiled.js"
+    "build": "babel server.js --out-file server.compiled.js",
+    "scripts": "node server.compiled.js"
   },
   "author": "Allen Ma",
   "license": "ISC",

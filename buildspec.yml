@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12.x
+  pre_build:
+    commands:
+      - echo pre_build phase starts...
+      - npm install
+      - cd client && npm install && cd ../
+    finally:
+      - echo pre_build phase finishes...
+  build:
+    commands:
+      - echo build phase starts...
+      - cd client && npm run build && cd ../
+      - npm run build
+    finally:
+      - echo build phase finishes...
+  post_build:
+    commands:
+      - echo build complete ~
+artifacts:
+  files:
+    - "**/*"

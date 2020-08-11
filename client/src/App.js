@@ -23,6 +23,7 @@ function App() {
       <div>
         <h1>{me.name}</h1>
         <h2>{me.motto}</h2>
+        <h3>This is to test if CI/CD pipeline is working...</h3>
       </div>
     </div>
   );
